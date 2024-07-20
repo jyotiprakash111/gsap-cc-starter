@@ -1,3 +1,5 @@
+import GoBack from "../components/GoBack";
+
 const GsapText = () => {
   // TODO: Implement gsap text animation
 
@@ -12,7 +14,7 @@ const GsapText = () => {
         <code>gsap.from()</code>, <code>gsap.fromTo()</code> and{" "}
         <code>gsap.timeline()</code> to animate text.
       </p>
-
+      <GoBack/>
       <p className="mt-5 text-gray-500 para">
         Using these methods we can achieve various text animations and effects
         like fade in, fade out, slide in, slide out, and many more.

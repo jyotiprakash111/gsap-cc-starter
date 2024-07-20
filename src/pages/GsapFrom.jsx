@@ -1,6 +1,19 @@
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import GoBack from "../components/GoBack";
+
 const GsapFrom = () => {
   // TODO: Implement the gsap.from() method
-
+  useGSAP(()=>{
+    gsap.to('#green-box', {
+      x: 250,
+      repeat: -1,
+      yoyo: true,
+      rotation: 360,
+      duration:2,
+      ease: 'power1.inOut'
+    })
+  },[])
   return (
     <main>
       <h1>GsapFrom</h1>
@@ -9,7 +22,7 @@ const GsapFrom = () => {
         The <code>gsap.from()</code> method is used to animate elements from a
         new state to their current state.
       </p>
-
+      <GoBack />
       <p className="mt-5 text-gray-500">
         The <code>gsap.from()</code> method is similar to the{" "}
         <code>gsap.to()</code> method, but the difference is that the{" "}

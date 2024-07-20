@@ -1,6 +1,21 @@
+
+import { useGSAP } from "@gsap/react";
+import GoBack from "../components/GoBack";
+import gsap from "gsap";
+
 const GsapStagger = () => {
   // TODO: Implement the gsap.stagger() method
+  useGSAP(()=>{
+    gsap.to('.stagger-box', {
+      y:250,
+      rotation: 360,
+      borderRadius:"100%",
+      repeat: -1,
+      yoyo: true,
+      stagger: 0.5
 
+  })
+  },[])
   return (
     <main>
       <h1>GsapStagger</h1>
@@ -9,7 +24,7 @@ const GsapStagger = () => {
         GSAP stagger is a feature that allows you to apply animations with a
         staggered delay to a group of elements.
       </p>
-
+      <GoBack/>
       <p className="mt-5 text-gray-500">
         By using the stagger feature in GSAP, you can specify the amount of time
         to stagger the animations between each element, as well as customize the
@@ -26,7 +41,7 @@ const GsapStagger = () => {
           rel="noreferrer noopener nofollow"
         >
           Gsap Stagger
-        </a>{" "}
+        </a>
         feature.
       </p>
 

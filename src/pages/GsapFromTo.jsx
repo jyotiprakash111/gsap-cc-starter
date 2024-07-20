@@ -1,6 +1,21 @@
-const GsapFromTo = () => {
-  // TODO: Implement the gsap.fromTo() method
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import GoBack from "../components/GoBack";
 
+const GsapFromTo = () => {
+
+  // TODO: Implement the gsap.fromTo() method
+  useGSAP(()=>{
+    gsap.to('#red-box', {
+      x: 250,
+      repeat: -1,
+      yoyo: true,
+      rotation: 360,
+      borderRadius:"100%",
+      duration:2,
+      ease: 'bounce.out'
+    })
+  },[])
   return (
     <main>
       <h1>GsapFromTo</h1>
@@ -9,7 +24,7 @@ const GsapFromTo = () => {
         The <code>gsap.fromTo()</code> method is used to animate elements from a
         new state to a new state.
       </p>
-
+    <GoBack /> 
       <p className="mt-5 text-gray-500">
         The <code>gsap.fromTo()</code> method is similar to the{" "}
         <code>gsap.from()</code> and <code>gsap.to()</code> methods, but the
@@ -21,14 +36,14 @@ const GsapFromTo = () => {
       </p>
 
       <p className="mt-5 text-gray-500">
-        Read more about the{" "}
+        Read more about the
         <a
           href="https://greensock.com/docs/v3/GSAP/gsap.fromTo()"
           target="_blank"
           rel="noreferrer noopener nofollow"
         >
           gsap.fromTo()
-        </a>{" "}
+        </a>
         method.
       </p>
 
